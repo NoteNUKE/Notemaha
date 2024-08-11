@@ -1,0 +1,67 @@
+@media screen and (max-width: 800px) {
+    .flex-three{
+        display: flex;
+        flex-direction: column;
+        text-align: left center;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .three1{
+        padding-bottom: 20px;
+    }
+
+    .grouppic{
+        justify-content: center;
+        width: auto;
+
+    }
+
+    .tall-image{
+        grid-row: span 1 / auto;
+    }
+    
+    
+    .card{
+        border-radius: 3%;
+        display: flex;
+        background-color: rgb(32, 60, 85);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-size: 3rem;
+        transition: all 0.3s;
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+
+    .pic{
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .all1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .all2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img1{
+        width: 200px;
+        height: 150px;
+    }
+
+    .img2{
+        width: 200px;
+        height: 150px;
+    }
+    
+}
