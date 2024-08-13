@@ -26,7 +26,7 @@ body {
 
 .topnav{
     border: 2px black solid;
-    background-color: rgba(5, 102, 161, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 30px;
     color: #000000;
     margin: 20px;
@@ -48,6 +48,7 @@ body {
 }
 
 .topnav a.active{
+    border: 2px black solid;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 30px;
     padding-top: 5%;
@@ -59,18 +60,18 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
-    background-color: #7cc6da;
+    background-color: #5AB2FF;
 
 }
 
 .work{
     color: white;
-    background-color: #f1e299;
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: left center;
 }
 
 .work1{
-    background-color: #e39cb6;
+    background-color: #A0DEFF;
     padding: 20px;
 }
 
@@ -103,7 +104,7 @@ body {
 
 .three1{
     flex-grow: 5;
-    background-color: #e39cb6;
+    background-color: #A0DEFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
