@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid CSS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <span><a href="https://www.facebook.com/nattapong.pocar">Note</a></span>
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+      </header>
+      
+      <div class="menu">
+        <ul>
+          <a href="#"><li>LINK ONE</li></a>
+          <a href="#"><li>LINK TWO</li></a>
+          <a href="#"><li>LINK THREE</li></a>
+          <a href="#"><li>LINK FOUR</li></a>
+          <a href="#"><li>LINK FIVE</li></a>
+        </ul>
+      </div> 
+
+      <div class="layout">กระผมนายณัฐพงค์ โภคา  <br> 
+        ได้ลองทำผลงานนี้ขึ้นมาเพื่อฝึกความชำนาญของภาษา html & css</div>
+
+    <div class="layout2">My name is Natthapong Phoka<br>
+        I make this website to practice about html & css<br>
+        <br></div>
+
+    <div class="grid">
+        <div class="tall-image" style="background-image: url(./ดาวน์โหลด.jfif);">1</div>
+        <div class="card" style="background-image: url(./ดาวน์โหลด.jfif);">2</div>
+        <div class="card" style="background-image:  url(./2.jfif);">3</div>
+        <div class="card" style="background-image: url(./3.jfif);">9</div>
+        <div class="tall-image3" style="background-image: url(./computer.png);">5</div>
+        <div class="card"style="background-image: url(./ดาวน์โหลด.jfif);">6</div>
+        <div class="tall-image" style="background-image: url(./ดาวน์โหลด.jfif);">7</div>
+        <div class="card" style="background-image: url(./429807966_1411457029470531_7953107571698611350_n.jpg);">8</div>
+        <div class="wide-image" style="background-image: url(./ดาวน์โหลด.jfif);">9</div>
+        <div class="tall-image"style="background-image: url(./3.jfif);">10</div>
+        <div class="wide-image" style="background-image: url(./purple.png);">11</div>
+        <div class="tall-image"style="background-image: url(./ดาวน์โหลด.jfif);">12</div>
+        <div class="wide-image"style="background-image: url(./3.jfif);">13</div>
+        <div class="wide-image" style="background-image: url(./computer.png);">14</div>
+
+
+    </div>
+
+    <div class="footer">
+      <div class="footer-text">
+        <span>
+          <a href="#">About</a>
+          <a href="#">Story</a>
+          <a href="#">Services</a>
+          <a href="#">Contacts</a>
+        </span>
+      </div>
+
+      <div class="footer-text">
+        <span>
+          <a href="#">Privacy</a>
+          <a href="#">Termini di utillizzo</a>
+          <a href="#">Note legali</a>
+          <a href="#">Credits</a>
+        </span>
+      </div>
+      <div class="footer-text">
+        <span>FONDAZIONE SENECE</span>
+        <span>Via Longhena 116</span>
+        <span>00060 - Nazzano (ROMA)</span>
+        <span>TEL. +39 0327 8523827</span>
+      </div>
+    </div>
+    
+    <script>
+        $( document ).ready(function() {
+
+$( ".cross" ).hide();
+$( ".menu" ).hide();
+$( ".hamburger" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".hamburger" ).hide();
+$( ".cross" ).show();
+});
+});
+
+$( ".cross" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".cross" ).hide();
+$( ".hamburger" ).show();
+});
+});
+
+});
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const gridItems = document.querySelectorAll(".grid > div");
+  
+  gridItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const fullscreenElement = document.createElement("div");
+      fullscreenElement.classList.add("fullscreen");
+      
+      
+      const clonedItem = item.cloneNode(true);
+      clonedItem.style.height = "80%";
+      clonedItem.style.width = "80%";
+      fullscreenElement.appendChild(clonedItem);
+      
+      document.body.appendChild(fullscreenElement);
+      
+      setTimeout(() => {
+        fullscreenElement.classList.add("active");
+      }, 10);
+      
+      fullscreenElement.addEventListener("click", () => {
+        fullscreenElement.classList.remove("active");
+        setTimeout(() => {
+          document.body.removeChild(fullscreenElement);
+        }, 300);
+      });
+    });
+  });
+});
+
+    </script>
+</body>
+</html>
