@@ -246,7 +246,7 @@ body {
   
   
   
-  .footer{
+    .footer{
       height: 200px;
   } 
   
@@ -308,8 +308,124 @@ body {
           
       }
   
+  
+  
+  
+  
+      .fakeimg {
+          margin-top: 5px;
+          background-color: #aaa;
+          padding: 20px;
+          margin-bottom: 30px;
+          height: 50vh; /* ให้ความสูงเป็น 50% ของ viewport height */
+          width: 70vw; /* ให้ความกว้างเป็น 50% ของ viewport width */
+          max-width: 100%; /* ป้องกัน element ไม่ใหญ่เกินไปเมื่อ viewport มีขนาดเล็ก */
+          max-height: 100%; /* ป้องกัน element ไม่สูงเกินไปเมื่อ viewport มีขนาดเล็ก */
+      }
+      .flex-container-2{
+        height: 30vh; /* ความสูงเป็น 50% ของ viewport height */
+        display: flex;
+      }
+      .content-img-1 .fakeimg{
+          
+          left:5vw; 
+          width: 40vw; 
+          height: 30vw;
+         
+      }
+      .content-img-2 .fakeimg{
+          width: 20vw; 
+          height: 20vw;
+      }  
     }
   
   
+  @media screen and (max-width: 1000px) {
+  
+      .flex-container-2{
+        height: 30vh; /* ความสูงเป็น 50% ของ viewport height */
+        display: flex;
+      }
+      .content-img-1 .fakeimg{
+          
+          left:5vw; 
+          width: 40vw; 
+          height: 30vw;
+         
+      }
+      .content-img-2 .fakeimg{
+          width: 20vw; 
+          height: 20vw;
+      }  
+    }
+    
+  /* .item1 { grid-area: bg; }
+  .item2 { grid-area: pic; }
+  .item3 { grid-area: bgw; }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'bg bg bg bg bgw bgw bgw bgw bgw'
+      'bg pic pic bg pic pic bgw bgw bgw'
+      'bg pic pic bg pic pic bgw bgw bgw'
+      'bg bg bg bg bgw bgw bgw bgw bgw';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
   
     
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  } */
+  
+  .item1 { grid-area: green; }
+  .item2 { grid-area: white; }
+  
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'green green green white white white '
+      'green green green white white white'
+      'green green green white white white ';
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 0px;
+    height: 60vw;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  .item2 .fakeimg{
+    position:absolute; 
+    right: 12vw; 
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .item1 .fakeimg{
+      display: flex;
+      flex-wrap: wrap;
+      width: 40vw; 
+      height: 30vw;
+    }
+    .item2 .fakeimg{
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      width: 20vw; 
+      height: 20vw;
+      right: 5vw;
+    }
+    .grid-container{
+      height: 60vh;
+    }
+  }
