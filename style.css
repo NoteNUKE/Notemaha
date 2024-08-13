@@ -40,6 +40,21 @@ body {
 
 }
 
+.picture{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    text-align: center;
+    
+}
+
+.img1{
+    flex-grow: 5;
+}
+.img2{
+    flex-grow: 5;
+}
+
 .topnav a{
     text-decoration: none;
     font-size: large;
