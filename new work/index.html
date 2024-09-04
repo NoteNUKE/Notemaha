@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid CSS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <span><a href="https://www.facebook.com/nattapong.pocar" style="text-decoration: none; color: #000; font-size: larger;">Note</a></span>
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+      </header>
+      
+      <div class="menu">
+        <ul>
+          <a href="#"><li>LINK ONE</li></a>
+          <a href="#"><li>LINK TWO</li></a>
+          <a href="#"><li>LINK THREE</li></a>
+          <a href="#"><li>LINK FOUR</li></a>
+          <a href="#"><li>LINK FIVE</li></a>
+        </ul>
+      </div> 
+
+      <div class="layout">เป็นการใช้งานภาษา css  <br> 
+        เกี่ยวกับคำสั่งของ grid และได้มีการนำ JAVASCRIPT เข้ามาร่วมด้วย</div>
+
+    <!-- <div class="layout2">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna convallis<br>
+        at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien<br>
+        massa, convallis a pellentesque nec, egestas non nisi.<br></div> -->
+
+    <div class="grid">
+        <div class="card" style="background-image: url(./img/ดาวน์โหลด.jfif);">1</div>
+        <div class="card" style="background-image: url(./img/2830d9e9-254a-4148-9c52-626b8b49b83d.jfif);">2</div>
+        <div class="card" style="background-image: url(./img/73a1916a-5323-41c8-b4bd-37b1e491e0ef.jfif);">3</div>
+        <div class="card" style="background-image: url(./img/68da5140-7119-4d10-a2b9-6d24b398d759.jfif);">4</div>
+        <div class="card" style="background-image: url(./img/7c3c143f-4f2b-4454-8415-655ba17ce92f.jfif);">5</div>
+        <div class="card" style="background-image: url(./img/cami.jfif);">6</div>
+        <div class="card" style="background-image: url(./img/Luna.jfif);">7</div>
+        <div class="card" style="background-image: url(./img/68da5140-7119-4d10-a2b9-6d24b398d759.jfif);">8</div>
+        <div class="card" style="background-image: url(./img/73a1916a-5323-41c8-b4bd-37b1e491e0ef.jfif);">9</div>
+    </div>
+
+    <script>
+        $( document ).ready(function() {
+
+$( ".cross" ).hide();
+$( ".menu" ).hide();
+$( ".hamburger" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".hamburger" ).hide();
+$( ".cross" ).show();
+});
+});
+
+$( ".cross" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".cross" ).hide();
+$( ".hamburger" ).show();
+});
+});
+
+});
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const gridItems = document.querySelectorAll(".grid > div");
+  
+  gridItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const fullscreenElement = document.createElement("div");
+      fullscreenElement.classList.add("fullscreen");
+      
+      
+      const clonedItem = item.cloneNode(true);
+      clonedItem.style.height = "80%";
+      clonedItem.style.width = "80%";
+      fullscreenElement.appendChild(clonedItem);
+      
+      document.body.appendChild(fullscreenElement);
+      
+      setTimeout(() => {
+        fullscreenElement.classList.add("active");
+      }, 10);
+      
+      fullscreenElement.addEventListener("click", () => {
+        fullscreenElement.classList.remove("active");
+        setTimeout(() => {
+          document.body.removeChild(fullscreenElement);
+        }, 300);
+      });
+    });
+  });
+});
+
+    </script>
+<div class="container">
+  <div class="left-section">
+      <p>About</p>
+      <p>Story</p>
+      <p>Services</p>
+      <p>Contacts</p>
+  </div>
+  <div class="right-section">
+      <p>Privacy</p>
+      <p>Termini di utilizzo</p>
+      <p>Note legali</p>
+      <p>Credits</p>
+    </div>
+  <div class="middle-section">
+      <p>NATTHAPONG PHOKA</p>
+      <p>Via Longhena 116</p>
+      <p>00060 - Nazzano (ROMA)</p>
+      <p>TEL. 0926909812</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

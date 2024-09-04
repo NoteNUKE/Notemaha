@@ -8,6 +8,86 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./mobile.css">
 
+    <style>
+        /* Style for the image grid */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .image-container img {
+            border: 2px solid #ccc;
+            padding: 10px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        /* Modal Content (Image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image (Image Text) - You can style it as you wish */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+        .modal-content {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)} 
+            to {transform: scale(1)}
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    
 </head>
 <body>
     <div class="menu">
@@ -18,14 +98,14 @@
     </div>
 </div>
 
-    <div class="header" style="border-top: 2px black solid; border-bottom: 2px black solid;">
+    <div class="header">
         <P style="font-weight: bold; font-size: 1.5rem;">PORTFOLIO <br>
-            MAHASARAKHAM UNIVERSITY</P>
+            FOR UNIVERSITY</P>
         <P style="font-size: larger; font-weight: bold;"><a href="https://www.facebook.com/nattapong.pocar" style="text-decoration: none;">Natthapong Phoka</a></P>
     </div>
 
     <div class="work">
-        <h2 class="work1" style="border-bottom: 2px black solid;">กิจกรรมฝึกประสบการณ์วิชาชีพ </h2>
+        <h2 class="work1">กิจกรรมฝึกประสบการณ์วิชาชีพ </h2>
         <h3 class="work11" style="padding-top: 10px;">เข้ารับการฝึกประสบการณ์วิชาชีพ ณ แขวงการทางจังหวัดชัยภูมิ</h3>
 
         <div class="pic" style="justify-content: center;">
@@ -59,7 +139,7 @@
     </div>
 
     <div class="work">
-        <h2 class="work1" style="border-top: 2px black solid; border-bottom: 2px black solid;">ธุรกิจครอบครัว FAMILY’S BUSINESS</h2>
+        <h2 class="work1">ธุรกิจครอบครัว FAMILY’S BUSINESS</h2>
         <h3 class="work11" style="padding-top: 10px;">จำหน่ายบ้านเรือนไทย</h3>
 
         <div class="pic" style="justify-content: center;">
@@ -93,7 +173,7 @@
 <div class="flex-three">
     <div class="three1" style="background-color: rgba(255, 255, 255, 1);">
         <div style="padding-top: 20px; padding-left: 20px; padding-right: 20px; background-color: #A0DEFF;
-        padding-bottom: 20px; border-top: 2px black solid; border-bottom: 2px black solid;">เปิดร้าน “ DAKE นม คาเฟ่ ” <br>
+        padding-bottom: 20px;">เปิดร้าน “ DAKE นม คาเฟ่ ” <br>
         จังหวัดสารคาม<br></div>
         <div class="dake" style="justify-content: center;">
             <div class="dake1"><img src="./img/S__9379910_0.jpg" 
@@ -106,9 +186,9 @@
         </div>
 
 
-    <div class="three2" style="background-color: rgba(255, 255, 255, 1); border-left: 2px black solid;">
+    <div class="three2" style="background-color: rgba(255, 255, 255, 1);">
         <div class="asd" style="padding-top: 20px; padding-left: 20px; padding-right: 20px; background-color: #A0DEFF;
-        padding-bottom: 20px; border-top: 2px black solid; border-bottom: 2px black solid;"> เปิดร้านเสื้อผ้าสำหรับนักศึกษา <br>
+        padding-bottom: 20px;"> เปิดร้านเสื้อผ้าสำหรับนักศึกษา <br>
         จังหวัดสารคาม<br></div>
         <div class="dake" style="justify-content: center;">
             <div class="dake1"><img src="./img/S__9379907_0.jpg" 

@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+}
+
+.card{
+    display: flex;
+    background-color: rgb(32, 60, 85);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+    transition: all 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px) scale(1.1);
+    opacity: 0.5;
+}
